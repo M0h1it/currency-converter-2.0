@@ -1,0 +1,120 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9fb;
+    margin: 0;
+    padding: 0;
+    color: #111;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .cta-button {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    text-decoration: none;
+    background-color: #ec008c;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  header {
+    margin-top: 4rem;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtext {
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .converter-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  
+  .converter-input,
+  .converter-output {
+    flex: 1 1 45%;
+    text-align: left;
+  }
+  
+  label {
+    display: flex;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.4rem;
+  }
+  
+  .currency-select select {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #eee;
+    outline: none;
+    /* border-bottom: 2px solid #eee; */
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 8L0.803847 0.5L11.1962 0.5L6 8Z' fill='%23999'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 10px;
+    cursor: pointer;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    border: none;
+    outline: none;
+  }
+  
+  #to-amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 1rem 0;
+  }
+  
+  .rate-info {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #444;
+  }
+  
+  .change {
+    color: #d44;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
+  canvas {
+    margin-top: 2rem;
+    width: 100%;
+    height: 150px;
+  }
+  

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Always get the real exchange rate</h1>
+      <p class="subtext">
+        Banks markup the exchange rate when you spend or transfer money abroad. We don't.
+      </p>
+      <a href="#" class="cta-button">Get the App</a>
+    </header>
+
+    <main class="converter-card">
+      <div class="converter-input">
+        <label for="from-currency">From</label>
+        <div class="currency-select">
+          <select id="from-currency"></select>
+        </div>
+        <input type="number" id="from-amount" placeholder="0" />
+        <div class="rate-info">
+          <p>Current rate: <span id="rate">-</span></p>
+          <p class="change">Today's change: <span id="change">-</span> <span id="change-icon"></span></p>
+        </div>
+      </div>
+
+      <div class="converter-output">
+        <label for="to-currency">To</label>
+        <div class="currency-select">
+          <select id="to-currency"></select>
+        </div>
+        <div id="to-amount">0.00</div>
+      </div>
+
+      <canvas id="rate-chart"></canvas>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
