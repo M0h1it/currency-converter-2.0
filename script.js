@@ -19,10 +19,6 @@ const currencyNames = {
   HKD: "Hong Kong Dollar",
 };
 
-function getFlagURL(code) {
-  return `https://flagsapi.com/${code.slice(0, 2)}/flat/24.png`;
-}
-
 async function loadCurrencies() {
   try {
     const res = await fetch('https://api.frankfurter.app/currencies');
@@ -31,13 +27,9 @@ async function loadCurrencies() {
 
     codes.forEach(code => {
       const name = currencyNames[code] || data[code];
-      const flag = getFlagURL(code);
 
       const optionFrom = new Option(`${code} - ${name}`, code);
-      optionFrom.innerHTML = `${code} - ${name}`;
-      optionFrom.setAttribute('data-flag', flag);
-
-      const optionTo = optionFrom.cloneNode(true);
+      const optionTo = new Option(`${code} - ${name}`, code);
 
       fromCurrency.appendChild(optionFrom);
       toCurrency.appendChild(optionTo);
@@ -127,14 +119,8 @@ async function loadChart(from, to) {
           }
         },
         scales: {
-          x: {
-            grid: { display: false },
-            ticks: { color: "#999" }
-          },
-          y: {
-            grid: { display: false },
-            ticks: { color: "#999" }
-          }
+          x: { grid: { display: false }, ticks: { color: "#999" } },
+          y: { grid: { display: false }, ticks: { color: "#999" } }
         }
       }
     });
@@ -143,7 +129,6 @@ async function loadChart(from, to) {
   }
 }
 
-// Event listeners
 fromCurrency.addEventListener('change', convertCurrency);
 toCurrency.addEventListener('change', convertCurrency);
 amountInput.addEventListener('input', convertCurrency);
